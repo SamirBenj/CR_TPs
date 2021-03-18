@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Index</title>
+	<title>Accueil Mediatheque</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
 </head>
 <body>
 
-<h3>Gestion d'un Billet et de ses Commentaire</h3>
 
-<h2>Gestion Billet</h2>
-<ul>
-	
-<li><a href="CreationBillet.php">Creation d'un billet</a></li>
-<li><a href="ConsultationBillet.php">Consultation d'un billet par titre</a></li>
 
-</ul>
+    <h1 style="text-align: center;">Accueil</h1>
+    <div style="text-align:center;">
+	<h3 style="color: white;"><span class="material-icons">account_circle</span>&nbspABONNE</h3>
+	<form name="DocAbo">
+          <select  id="ListAbbone" onchange="locationAbbones()" size="1">
+              <option selected>Faite votre choix</option>
+              <option value="0">Liste</option>
+              <option value="1">Créer</option>
+              <option value="2">Modifier</option>
+              <option value="3">Supprimer</option>
+              <option value="4">Rechercher</option>
+          </select>
+      </form>
 
-<h2>Gestion Commentaire</h2>
-<ul>
-	
-<li><a href="CreationCommentaire.php">Creation d'un commentaire</a></li>
-<li><a href="ConsultationCommentaire.php">Consultation d'un commentaire par auteur</a></li>
+    <h3 style="color: white;"><span class="material-icons">description</span>&nbspDOCUMENT</h3>
+	<form name="DocList">
+          <select name="liste"  id="ListDocument"  onchange="LocationDocument()" size="1" >
+              <option  selected>Faite votre choix</option>
+              <option value="0">Liste</option>
+              <option value="1">Créer</option>
+              <option value="2">Modifier</option>
+              <option value="3">Supprimer</option>
+              <option value="4">Rechercher</option>
+          </select>
+      </form>
 
-</ul>
+   <h3 style="color: white;"><span class="material-icons">credit_score</span>&nbspEMPRUNT</h3>
+<form name="EmpruntList">
+          <select name="liste"  id="ListEmprunt"  onchange="LocationEmprunt()" size="1" >
+              <option  selected>Faite votre choix</option>
+              <option value="0">Sortie</option>
+              <option value="1">Retour</option>
+          </select>
+      </form>
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
